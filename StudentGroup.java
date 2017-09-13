@@ -136,6 +136,17 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		Student[] temp=new Student[this.students.length-1];
+		int c=0;
+		for(int i=0; i<this.students.length; i++)
+		{
+			temp[c++]=this.students[i];
+			if(this.students[i]==student)
+			{
+				break;
+			}
+		}
+		this.students=temp;
 	}
 
 	@Override
@@ -151,6 +162,18 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void bubbleSort() {
 		// Add your implementation here
+		for(int i = 0; i < this.students.length; i++)
+		  {
+			  for(int j = 0; j < this.students.length-i-1; j++)
+			  {
+                   if(this.students[j].getId() > this.students[j+1].getId())
+				   {
+					   Student temp = this.students[j];
+					   this.students[j] = this.students[j+1];
+					   this.students[j+1] = temp;
+				   }
+			  }	   
+		  }
 	}
 
 	@Override
