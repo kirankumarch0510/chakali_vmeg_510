@@ -38,6 +38,9 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
+		
+	if(index<0){
+	throw new IllegalArgumentException();}
 		return null;
 
 	}
@@ -45,6 +48,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+	
 	}
 
 	@Override
